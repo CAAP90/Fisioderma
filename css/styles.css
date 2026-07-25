@@ -267,6 +267,7 @@ em {
 .hero-media-track img {
   height: 380px;
   width: auto;
+  max-width: none;
   object-fit: contain;
   background: #fff;
   border-radius: var(--radius);
@@ -281,7 +282,7 @@ em {
 }
 
 @media (max-width: 900px) {
-  .hero-media-track img { height: 200px; width: 280px; }
+  .hero-media-track img { height: 200px; width: 280px; max-width: none; }
 }
 
 /* ============ SERVICIOS ============ */
@@ -723,6 +724,7 @@ em {
 .portafolio-track img {
   height: 360px;
   width: auto;
+  max-width: none;
   background: #fff;
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
@@ -736,7 +738,7 @@ em {
 }
 
 @media (max-width: 900px) {
-  .portafolio-track img { height: 280px; width: auto; }
+  .portafolio-track img { height: 280px; width: auto; max-width: none; }
 }
 .location-social-block {
     position: relative;
