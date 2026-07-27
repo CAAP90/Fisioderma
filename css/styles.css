@@ -294,6 +294,7 @@ Esto simplemente regresa el carrusel a como estaba antes de nuestras pruebas (co
   width: auto;
   max-width: none;
   object-fit: cover;
+  object-position: center top;
   background: #fff;
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
