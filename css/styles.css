@@ -260,8 +260,8 @@ em {
   display: flex;
   gap: 20px;
   width: max-content;
-  animation: hero-scroll 45s linear infinite;
-  will-change: transform;
+  animation: none;
+  will-change: auto;
 }
 
 .hero-media-track img {
