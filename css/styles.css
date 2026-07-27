@@ -252,11 +252,34 @@ em {
   margin-top: 60px;
   overflow: hidden;
   contain: layout;
-  /*
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
   mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
-  */
 }
+
+3. Justo debajo, busca este otro bloque:
+
+css
+.hero-media-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: none;
+  will-change: auto;
+}
+
+.hero-media-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: hero-scroll 45s linear infinite;
+  will-change: transform;
+}
+
+4. Guarda el archivo.
+
+Esto simplemente regresa el carrusel a como estaba antes de nuestras pruebas (con movimiento y con el efecto de desvanecido en los bordes), ya que confirmamos que esos dos elementos no eran la causa del espacio en blanco.
+
+¿Lo haces? Después seguimos investigando el HTML.
 
 .hero-media-track {
   display: flex;
