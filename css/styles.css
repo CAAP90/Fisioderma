@@ -781,5 +781,5 @@ form button {
     pointer-events: auto !important;
 }
 .hero-media-track img[src*="paciente_terapeuta"] {
-  object-position: center 10%;
+  object-position: center 20%;
 }
