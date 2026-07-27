@@ -445,10 +445,6 @@ Esto simplemente regresa el carrusel a como estaba antes de nuestras pruebas (co
 .nosotros-media img {
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
-  width: 100%;
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  object-position: center top;
 }
 
 .nosotros-text p {
