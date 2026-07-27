@@ -293,7 +293,7 @@ Esto simplemente regresa el carrusel a como estaba antes de nuestras pruebas (co
   height: 380px;
   width: auto;
   max-width: none;
-  object-fit: contain;
+  object-fit: cover;
   background: #fff;
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
