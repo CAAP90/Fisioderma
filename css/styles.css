@@ -495,16 +495,14 @@ Esto simplemente regresa el carrusel a como estaba antes de nuestras pruebas (co
 .especialista-media {
   position: relative;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .especialista-media img {
   width: 100%;
-  height: auto; /* Cambiamos a auto para que respete la altura natural de la foto */
-  max-height: 520px; /* Evita que crezca demasiado en pantallas grandes */
-  object-fit: contain; /* Muestra la imagen completa sin recortar ni estirar */
+  height: 100%;
+  aspect-ratio: 3 / 4; /* Cambiamos la proporción para que se adapte mejor a una foto vertical completa */
+  object-fit: cover; /* Volvemos a cover para que llene todo el espacio sin dejar barras */
+  object-position: center 30%; /* Ajusta el encuadre para que se vea bien el rostro y la parte inferior completa */
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
   display: block;
