@@ -442,9 +442,20 @@ Esto simplemente regresa el carrusel a como estaba antes de nuestras pruebas (co
   align-items: center;
 }
 
+.nosotros-media {
+  /* Opcional: Asegura que el contenedor tenga una altura fija o controlada si lo necesitas */
+  width: 100%;
+}
+
 .nosotros-media img {
+  width: 100%;
+  height: 100%; /* O puedes asignarle un alto fijo en px o vh si prefieres, ej: height: 450px; */
+  max-height: 500px; /* Evita que crezca demasiado en pantallas grandes */
+  object-fit: cover; /* Recorta los excesos sutilmente para mantener la proporción sin deformar */
+  object-position: center; /* Centra el encuadre para que las personas salgan perfectas */
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
+  display: block; /* Elimina espacios fantasma debajo de la imagen */
 }
 
 .nosotros-text p {
@@ -466,7 +477,6 @@ Esto simplemente regresa el carrusel a como estaba antes de nuestras pruebas (co
   color: var(--teal);
   font-weight: 700;
 }
-
 /* ============ ESPECIALISTA ============ */
 .especialista { padding: 110px 0; background: #fff; }
 
