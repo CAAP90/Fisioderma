@@ -494,24 +494,32 @@ Esto simplemente regresa el carrusel a como estaba antes de nuestras pruebas (co
 
 .especialista-media {
   position: relative;
-}
-.especialista-media img {
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-soft);
   width: 100%;
+}
+
+.especialista-media img {
+  width: 100%;
+  height: 100%;
+  max-height: 520px; /* Le da un tope de alto controlado para que no crezca de más en pantallas grandes */
   aspect-ratio: 4/5;
   object-fit: cover;
+  object-position: center top; /* Alinea ligeramente hacia arriba para enfocar bien el rostro de la especialista */
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  display: block;
 }
+
 .especialista-media::before {
   content: '';
   position: absolute;
-  top: -18px; right: -18px;
-  width: 100%; height: 100%;
+  top: -18px; 
+  right: -18px;
+  width: 100%; 
+  height: 100%;
   border: 2px solid var(--dorado);
   border-radius: var(--radius);
   z-index: -1;
 }
-
 /* ============ AGENDA ============ */
 .agenda { padding: 110px 0; background: var(--negro); color: #fff; }
 
