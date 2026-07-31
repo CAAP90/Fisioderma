@@ -166,16 +166,24 @@
   <p class="resultados-label">Resultados con nuestros pacientes</p>
   <div class="resultados-grid">
     <figure class="resultados-item">
-      <img src="assets/img/paciente1.webp" srcset="assets/img/paciente1-sm.webp 600w, assets/img/paciente1.webp 900w" sizes="(max-width: 900px) 400px, 900px" alt="Paciente en sesión de descarga muscular" loading="lazy" width="900" height="1200">
+      <img src="assets/img/paciente1.webp" srcset="assets/img/paciente1-sm.webp 600w, assets/img/paciente1.webp 900w" sizes="(max-width: 900px) 400px, 900px" alt="Paciente en sesión de descarga muscular" loading="lazy" width="900" height="1200"
+        data-title="Descarga muscular"
+        data-desc="Alivia contracturas y puntos de dolor acumulado. Reduce la tensión y mejora tu movilidad.">
     </figure>
     <figure class="resultados-item">
-      <img src="assets/img/paciente2.webp" srcset="assets/img/paciente2-sm.webp 600w, assets/img/paciente2.webp 900w" sizes="(max-width: 900px) 400px, 900px" alt="Paciente en sesión de acupuntura" loading="lazy" width="900" height="1600">
+      <img src="assets/img/paciente2.webp" srcset="assets/img/paciente2-sm.webp 600w, assets/img/paciente2.webp 900w" sizes="(max-width: 900px) 400px, 900px" alt="Paciente en sesión de acupuntura" loading="lazy" width="900" height="1600"
+        data-title="Acupuntura"
+        data-desc="Equilibra tu cuerpo, alivia el dolor y promueve tu bienestar general de forma natural.">
     </figure>
     <figure class="resultados-item">
-      <img src="assets/img/paciente3.webp" srcset="assets/img/paciente3-sm.webp 600w, assets/img/paciente3.webp 900w" sizes="(max-width: 900px) 400px, 900px" alt="Paciente en ajuste quiropráctico" loading="lazy" width="900" height="1960">
+      <img src="assets/img/paciente3.webp" srcset="assets/img/paciente3-sm.webp 600w, assets/img/paciente3.webp 900w" sizes="(max-width: 900px) 400px, 900px" alt="Paciente en ajuste quiropráctico" loading="lazy" width="900" height="1960"
+        data-title="Ajuste quiropráctico"
+        data-desc="Restaura la alineación de tu columna, alivia el dolor y mejora tu función nerviosa y postural.">
     </figure>
     <figure class="resultados-item">
-      <img src="assets/img/paciente4.webp" srcset="assets/img/paciente4-sm.webp 600w, assets/img/paciente4.webp 900w" sizes="(max-width: 900px) 400px, 900px" alt="Paciente en rehabilitación deportiva" loading="lazy" width="900" height="1600">
+      <img src="assets/img/paciente4.webp" srcset="assets/img/paciente4-sm.webp 600w, assets/img/paciente4.webp 900w" sizes="(max-width: 900px) 400px, 900px" alt="Paciente en rehabilitación deportiva" loading="lazy" width="900" height="1600"
+        data-title="Rehabilitación deportiva"
+        data-desc="Programas personalizados para volver a tu actividad física con fuerza y seguridad.">
     </figure>
   </div>
 </div>
@@ -210,22 +218,32 @@
     <h2 class="section-title center">Cada sesión, <em>un paso hacia tu bienestar</em></h2>
 
     <div class="galeria-grid">
-      <figure class="galeria-item span-2">
-        <img src="assets/img/equipo.webp" alt="Equipo de fisioterapia trabajando" loading="lazy">
-      </figure>
-      <figure class="galeria-item">
-        <img src="assets/img/ventosas.webp" alt="Terapia con ventosas" loading="lazy">
-      </figure>
-      <figure class="galeria-item">
-        <img src="assets/img/prp.webp" alt="Plasma rico en plaquetas" loading="lazy">
-      </figure>
-      <figure class="galeria-item">
-        <img src="assets/img/rehab-deportiva.webp" alt="Rehabilitación deportiva" loading="lazy">
-      </figure>
-      <figure class="galeria-item">
-        <img src="assets/img/terapia-manual.webp" alt="Terapia manual" loading="lazy">
-      </figure>
-    </div>
+  <figure class="galeria-item span-2">
+  <img src="assets/img/equipo.webp" alt="Equipo de fisioterapia trabajando" loading="lazy"
+    data-title="Descarga muscular"
+    data-desc="Alivia contracturas y puntos de dolor acumulado. Reduce la tensión y mejora tu movilidad, con la atención personalizada de nuestro equipo en Fisioderma.">
+</figure>
+  <figure class="galeria-item">
+    <img src="assets/img/ventosas.webp" alt="Terapia con ventosas" loading="lazy"
+      data-title="Terapia con ventosas"
+      data-desc="Técnica de succión que mejora la circulación, libera la fascia y disminuye el dolor muscular.">
+  </figure>
+  <figure class="galeria-item">
+    <img src="assets/img/prp.webp" alt="Plasma rico en plaquetas" loading="lazy"
+      data-title="Plasma rico en plaquetas (PRP)"
+      data-desc="Tratamiento regenerativo que acelera la recuperación de lesiones musculares y articulares.">
+  </figure>
+  <figure class="galeria-item">
+    <img src="assets/img/rehab-deportiva.webp" alt="Rehabilitación deportiva" loading="lazy"
+      data-title="Rehabilitación deportiva"
+      data-desc="tenemos programas personalizados para volver a tu actividad física con fuerza y seguridad.">
+  </figure>
+  <figure class="galeria-item">
+    <img src="assets/img/terapia-manual.webp" alt="Terapia manual" loading="lazy"
+      data-title="Terapia manual"
+      data-desc="manejamos técnicas manuales que alivian tensiones, mejoran la movilidad y aceleran tu recuperación.">
+  </figure>
+</div>
   </div>
 </section>
 
@@ -419,6 +437,62 @@ document.querySelectorAll('.main-nav a').forEach(function(link) {
     document.getElementById('menuToggle').classList.remove('active');
   });
 });
+/* ===== ZOOM DE IMÁGENES: carrusel hero + carrusel portafolio + galería (con reseña) ===== */
+(function() {
+  const overlay = document.createElement('div');
+  overlay.className = 'img-lightbox-overlay';
+  overlay.innerHTML =
+    '<button class="img-lightbox-close" aria-label="Cerrar">&times;</button>' +
+    '<div class="img-lightbox-panel">' +
+      '<img src="" alt="">' +
+      '<div class="img-lightbox-caption"></div>' +
+    '</div>';
+  document.body.appendChild(overlay);
+
+  const overlayImg = overlay.querySelector('img');
+  const caption = overlay.querySelector('.img-lightbox-caption');
+  const closeBtn = overlay.querySelector('.img-lightbox-close');
+
+  function openLightbox(imgEl) {
+    const fullSrc = imgEl.src.includes('-sm.webp')
+      ? imgEl.src.replace('-sm.webp', '.webp')
+      : imgEl.src;
+    overlayImg.src = fullSrc;
+    overlayImg.alt = imgEl.alt || '';
+
+    const title = imgEl.dataset.title;
+    const desc = imgEl.dataset.desc;
+    if (title || desc) {
+      caption.innerHTML =
+        (title ? '<h4>' + title + '</h4>' : '') +
+        (desc ? '<p>' + desc + '</p>' : '');
+    } else {
+      caption.innerHTML = '';
+    }
+
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.hero-media-track img, .portafolio-track img, .galeria-item img, .resultados-item img').forEach(function(img) {
+    img.addEventListener('click', function() {
+      openLightbox(img);
+    });
+  });
+
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) closeLightbox();
+  });
+  closeBtn.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+})();
 </script>
 </body>
 </html>
