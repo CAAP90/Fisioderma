@@ -840,7 +840,8 @@ form button {
 .portafolio-track img,
 .galeria-item img,
 .resultados-item img,
-.servicio-media-item img {
+.servicio-media-item img,
+.tips-item img {
   cursor: zoom-in;
 }
 
