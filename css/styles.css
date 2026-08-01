@@ -935,6 +935,13 @@ form button {
   cursor: zoom-out;
 }
 
+@media (max-width: 760px) {
+  .img-lightbox-overlay img {
+    max-width: 92vw;
+    max-height: 75vh;
+  }
+}
+
 .img-lightbox-overlay.active img {
   transform: scale(1);
 }
