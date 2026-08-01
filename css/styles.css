@@ -312,43 +312,47 @@ Esto simplemente regresa el carrusel a como estaba antes de nuestras pruebas (co
 }
 
 /* ============ SERVICIOS ============ */
-.servicios { padding: 110px 0; background: var(--marmol-2); }
-
-.servicios-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
-  margin-top: 60px;
+.servicios {
+  padding: 110px 0;
+  background: var(--marmol-2);
+  position: relative;
+  overflow: hidden;
 }
 
-.servicio-card {
-  background: #fff;
-  padding: 36px 30px;
-  border-radius: var(--radius);
-  border: 1px solid rgba(26,26,26,0.05);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+.servicios-ribbon {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 0;
+  opacity: 0.5;
+  pointer-events: none;
 }
-.servicio-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-soft);
+.servicios-ribbon svg { width: 100%; height: 100%; }
+
+.servicios-ribbon-path {
+  fill: none;
+  stroke: var(--dorado);
+  stroke-width: 1.5;
+  opacity: 0.3;
 }
 
-.servicio-icon {
-  width: 48px; height: 48px;
-  color: var(--dorado);
-  margin-bottom: 18px;
+.servicios-ribbon-glow {
+  fill: none;
+  stroke: var(--dorado);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 400 3000;
+  opacity: 0.55;
+  filter: drop-shadow(0 0 6px rgba(201,162,75,0.6));
+  animation: servicios-glow-move 10s linear infinite;
 }
-.servicio-icon svg { width: 100%; height: 100%; }
 
-.servicio-card h3 {
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 10px;
+@keyframes servicios-glow-move {
+  to { stroke-dashoffset: -3400; }
 }
-.servicio-card p {
-  color: var(--texto-suave);
-  font-size: 0.95rem;
+
+.servicios .container {
+  position: relative;
+  z-index: 1;
 }
 
 /* ============ RESULTADOS / PACIENTES ============ */
@@ -431,6 +435,40 @@ Esto simplemente regresa el carrusel a como estaba antes de nuestras pruebas (co
   transition: transform 0.5s ease;
 }
 .galeria-item:hover img { transform: scale(1.08); }
+
+.servicios-media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 50px;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.servicio-media-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  aspect-ratio: 3/4;
+  line-height: 0;
+  position: relative;
+}
+.servicio-media-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.servicio-media-item:hover img { transform: scale(1.06); }
+.servicio-media-item img[src*="acupuntura"],
+.servicio-media-item img[src*="plasmas_plaquetas"] {
+  object-fit: fill !important;
+  background: var(--marmol) !important;
+  padding: 0px !important;
+}
+
+@media (max-width: 900px) {
+  .servicios-media-grid { grid-template-columns: repeat(2, 1fr); }
+}
 
 /* ============ NOSOTROS ============ */
 .nosotros { padding: 110px 0; background: var(--marmol-2); }
@@ -801,7 +839,8 @@ form button {
 .hero-media-track img,
 .portafolio-track img,
 .galeria-item img,
-.resultados-item img {
+.resultados-item img,
+.servicio-media-item img {
   cursor: zoom-in;
 }
 
