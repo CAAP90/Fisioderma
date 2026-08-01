@@ -890,18 +890,21 @@ form button {
 @media (max-width: 760px) {
   .img-lightbox-panel {
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
+    max-height: 82vh;
+    overflow-y: auto;
+    padding-top: 10px;
   }
   .img-lightbox-caption {
     border-left: none;
     border-top: 3px solid #c9a24b;
-    padding: 16px 8px 0;
+    padding: 14px 8px 4px;
     max-width: 92vw;
     text-align: center;
   }
   .img-lightbox-overlay img {
     max-width: 92vw;
-    max-height: 60vh;
+    max-height: 48vh;
   }
 }
 

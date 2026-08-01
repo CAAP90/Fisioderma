@@ -458,12 +458,23 @@ document.querySelectorAll('.main-nav a').forEach(function(link) {
 
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
+    document.querySelector('.img-lightbox-panel').scrollTop = 0;
+    history.pushState({ lightbox: true }, '');
   }
 
-  function closeLightbox() {
+  function closeLightbox(fromPopstate) {
     overlay.classList.remove('active');
     document.body.style.overflow = '';
+    if (!fromPopstate && history.state && history.state.lightbox) {
+      history.back();
+    }
   }
+
+  window.addEventListener('popstate', function() {
+    if (overlay.classList.contains('active')) {
+      closeLightbox(true);
+    }
+  });
 
   document.querySelectorAll('.hero-media-track img, .portafolio-track img, .galeria-item img, .resultados-item img, .servicio-media-item img, .tips-item img').forEach(function(img) {
     img.addEventListener('click', function() {
